@@ -9,58 +9,90 @@
 	<link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-<div class="container" id="container"></div>
-<section class="home">
-	<h1 class="home__title js-title"><span>Hi, my name Taras Mykhalevych.</span></h1>
-	<p class="home__description js-description"><span>I create design, that are ahead of time</span></p>
-	<button class="home__btn js-btn js-viewPortfolio"><span>view portfolio</span></button>
-</section>
-<section class="projects__wrapper js-projectsContainer">
-	<div class="projects js-projectsEvents">
-		<button class="project" data-project="0">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project" data-project="1">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
-		<button class="project">
-			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
-		</button>
+<section class="md-modal md-effect-1" id="modal-1">
+	<div class="md-content">
+		<button class="templates__close js-closePopup"></button>
+		<video src="https://jasonyuan.design/static/media/applemusic_hero2.05943dc2.mp4" preload="auto" autoplay loop playsinline style="width: 100%; height: 100%;"></video>
+		<div class="display-content-text">
+			<h3>UX Case Study</h3>
+			<h2>Apple Music</h2>
+			<hr>
+			<p>An unsolicited redesign completed over three months, focusing on overhauling the mobile user experience and visual branding based on qualitative user research. Originally published on Medium and featured on FastCoDesign, TheNextWeb, and Mic, amongst others.</p>
+		</div>
 	</div>
 </section>
-<section class="templates__wrapper">
-	<button class="templates__close js-closePopup">close</button>
-	<div class="templates">
-		<div class="template">Clicked on first element</div>
-		<div class="template">Clicked on second element</div>
-	</div>
-</section>
+<div class="md-overlay">
+	<div class="container" id="container"></div>
+	<section class="home">
+		<h1 class="home__title js-title"><span>Hi, my name Taras Mykhalevych.</span></h1>
+		<p class="home__description js-description"><span>I create design, that are</span></p>
+		<p class="home__description js-description2"><span>ahead of time</span></p>
+		<button class="home__btn js-btn js-viewPortfolio"><span>view portfolio</span></button>
+	</section>
+	<section class="projects__wrapper js-projectsContainer">
+		<div class="projects js-projectsEvents">
+			<div class="project__block">
+				<button class="project md-trigger" data-modal="modal-1">
+					<figure class="project__figure">
+						<img src="static/images/sample-01.png" alt="Image" class="project__image">
+						<figcaption class="project__caption">
+							<h3 class="project__title">Kepler Finance</h3>
+						</figcaption>
+					</figure>
+				</button>
+			</div>
+			<div class="project__block">
+				<button class="project md-trigger" data-modal="modal-1">
+					<figure class="project__figure">
+						<img src="static/images/sample-01.png" alt="Image" class="project__image">
+						<figcaption class="project__caption">
+							<h3 class="project__title">Kepler Finance</h3>
+						</figcaption>
+					</figure>
+				</button>
+			</div>
+			<div class="project__block">
+				<button class="project md-trigger" data-modal="modal-1">
+					<figure class="project__figure">
+						<img src="static/images/sample-01.png" alt="Image" class="project__image">
+						<figcaption class="project__caption">
+							<h3 class="project__title">Kepler Finance</h3>
+						</figcaption>
+					</figure>
+				</button>
+			</div>
+			<div class="project__block">
+				<button class="project md-trigger" data-modal="modal-1">
+					<figure class="project__figure">
+						<img src="static/images/sample-01.png" alt="Image" class="project__image">
+						<figcaption class="project__caption">
+							<h3 class="project__title">Kepler Finance</h3>
+						</figcaption>
+					</figure>
+				</button>
+			</div>
+			<div class="project__block">
+				<button class="project md-trigger" data-modal="modal-1">
+					<figure class="project__figure">
+						<img src="static/images/sample-01.png" alt="Image" class="project__image">
+						<figcaption class="project__caption">
+							<h3 class="project__title">Kepler Finance</h3>
+						</figcaption>
+					</figure>
+				</button>
+			</div>
+			<div class="project__block">
+				<button class="project md-trigger" data-modal="modal-1">
+					<figure class="project__figure">
+						<img src="static/images/sample-01.png" alt="Image" class="project__image">
+						<figcaption class="project__caption">
+							<h3 class="project__title">Kepler Finance</h3>
+						</figcaption>
+					</figure>
+				</button>
+			</div>
+		</div>
+	</section>
+</div>
 </body>
 </html>

@@ -1,5 +1,5 @@
-.container {
-	margin-left: 20%;
+.container.hide {
+	animation: hide 1s ease both;
 }
 
 .home {
@@ -17,11 +17,15 @@
 }
 
 .home__description {
-	margin: 10px 0 115px;
+	margin-top: 10px;
 	opacity: 0;
 	font-size: 36px;
 	font-weight: 300;
 	color: #fff;
+}
+
+.home__description:nth-of-type(2) {
+	margin: 0 0 115px;
 }
 
 .home__btn {
@@ -39,6 +43,22 @@
 .home__description.active,
 .home__btn.active {
 	opacity: 1;
+}
+
+.home__title.hide,
+.home__description.hide,
+.home__btn.hide {
+	animation: hide 1s ease both;
+}
+
+@keyframes hide {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
 }
 
 .word {
@@ -75,16 +95,18 @@
 
 .projects__wrapper.active {
 	display: block;
-	animation: showProjects 1s both ease;
+	animation: showProjects 1s 1s both ease;
 }
 
 @keyframes showProjects {
 	0% {
 		opacity: 0;
+		left: 100%;
 	}
 
 	100% {
 		opacity: 1;
+		left: 0;
 	}
 }
 
@@ -92,65 +114,161 @@
 	position: absolute;
 	top: 50%;
 	left: 0;
-	width: 280px;
+	width: 425px;
 	height: 100vw;
+	padding: 100px 0;
 	overflow-y: auto;
 	overflow-x: hidden;
-	transform: rotate(-90deg) translate(50%, -280px);;
+	transform: rotate(-90deg) translate(50%, -425px);;
 	transform-origin: right top;
 }
 
+.project__block {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	width: 425px;
+	height: 425px;
+	padding: 0 10px;
+}
+
 .project {
-	width: 280px;
-	height: 280px;
-	margin: 10px;
+	min-width: 405px;
+	padding: 0;
+	perspective: 1000px;
 }
 
-.project img {
-	transition: all .3s ease;
-}
-
-.project img:hover {
-	box-shadow: 0 3px 30px rgba(0, 0, 0, 0.8);
-}
-
-.projects > .project {
+.projects > .project__block {
 	transform: rotate(90deg);
 }
 
-.templates__wrapper {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 50%;
-	width: 80%;
-	height: 100%;
-	transform: translateX(-50%);
-	background-color: rgba(0, 0, 0, 0.71);
-	opacity: 0;
+.project__figure {
+	position: relative;
 }
 
-.templates__wrapper.active {
-	display: block;
-	animation: showProjects 1s both ease;
+.project__figure::before {
+	content: '';
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+	z-index: -1;
+	box-shadow: 0 30px 20px rgba(0,0,0,0.5);
+}
+
+.project__caption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 64px;
+}
+
+.project__title {
+	font-size: 40px;
+	color: white;
+	transform: translate3d(0,80px,0);
+	opacity: 0;
+	transition: transform .4s, opacity .4s;
+}
+
+.project:hover .project__title {
+	transform: translate3d(0,0,0);
+	opacity: 1;
+}
+
+.md-effect-1 .md-content {
+	transform: scale(0.7);
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.md-show.md-effect-1 .md-content {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.md-modal {
+	position: absolute;
+	left: 50%;
+	z-index: 2000;
+	max-width: 1056px;
+	width: calc(100vw - 60px);
+	min-width: 320px;
+	height: auto;
+	padding-bottom: 45px;
+	border: 1px solid #2c2e30;
+	border-radius: 4px;
+	margin: 20px auto 60px;
+	box-shadow: 0 50px 200px rgba(0,0,0,.5);
+	background-color: #111;
+	visibility: hidden;
+	backface-visibility: hidden;
+	color: #fff;
+	transform: translateX(-50%);
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-effect-1 .md-content {
+	transform: scale(.7);
+	opacity: 0;
+	transition: all .3s;
+}
+
+.md-show.md-effect-1 .md-content {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+	filter: blur(4px);
 }
 
 .templates__close {
+	position: fixed;
+	top: 5px;
+	left: -45px;
+	width: 20px;
+	height: 20px;
+	transition: all ease .3s;
+}
+
+.templates__close:hover {
+	transform: rotate(90deg);
+}
+
+.templates__close:before,
+.templates__close:after {
+	content: '';
 	position: absolute;
-	top: 25px;
-	right: 25px;
-	font-size: 26px;
-	color: white;
+	top: 0;
+	left: 9px;
+	width: 2px;
+	height: 20px;
+	background-color: white;
+	transform: rotate(45deg);
 }
 
-.template {
-	display: none;
-	margin: 50px;
-	color: white;
-	opacity: 0;
+.templates__close:after {
+	transform: rotate(-45deg);
 }
 
-.template.active {
-	display: block;
-	animation: showProjects 1s both ease;
+.display-content-text {
+	padding: 15px 20px 35px;
+	max-width: 800px;
+	margin: 0 auto;
+	z-index: 10003;
 }

@@ -5,7 +5,7 @@ import Particles from './particles/Particles';
 export default class WebGLView {
 
 	constructor() {
-		this.samples = 'static/images/sample-latest.png';
+		this.samples = 'static/images/sample-latest_right.png';
 		this.initThree();
 		this.initParticles();
 		this.initControls();

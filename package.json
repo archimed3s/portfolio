@@ -1,7 +1,7 @@
 {
-  "name": "webpack-threejs",
+  "name": "portfolio",
   "version": "1.0.1",
-  "description": "A simple boilerplate to start projects with Three.js using webpack.",
+  "description": "Portfolio",
   "keywords": [
     "three.js",
     "webpack",
@@ -9,8 +9,7 @@
     "glslify"
   ],
   "author": {
-    "name": "Bruno Imbrizi",
-    "url": "http://brunoimbrizi.com"
+    "name": "Heorhii"
   },
   "license": "MIT",
   "sideEffects": false,
@@ -19,8 +18,7 @@
     "start": "webpack-dev-server --config config/dev.js"
   },
   "dependencies": {
-    "@brunoimbrizi/controlkit": "^0.1.96",
-    "browser-detect": "^0.2.28",
+    "animejs": "^3.0.1",
     "domready": "^1.0.8",
     "glsl-noise": "0.0.0",
     "gsap": "^2.1.2",

@@ -8,12 +8,12 @@ const __root = path.resolve(__dirname, '../');
 
 module.exports = {
 	entry: {
-		index: ['@babel/polyfill', './src/scripts/index.js'],
+		index: ['@babel/polyfill', './src/scripts/index.js']
 	},
 	output: {
 		path: path.resolve(__root, 'dist'),
 		filename: 'scripts/[name].[chunkhash].js',
-		chunkFilename: 'scripts/[name].[chunkhash].js',
+		chunkFilename: 'scripts/[name].[chunkhash].js'
 	},
 	module: {
 		rules: [
@@ -35,7 +35,7 @@ module.exports = {
 			{
 				test: /three\/examples\/js/,
 				use: 'imports-loader?THREE=three'
-			},
+			}
 			/*
 			{
 				test: /\.css$/,
@@ -54,21 +54,18 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			'three-examples': path.join(__root, './node_modules/three/examples/js'),
+			'three-examples': path.join(__root, './node_modules/three/examples/js')
 		}
 	},
 	plugins: [
-		new CleanWebpackPlugin(
-			['dist'],
-			{ root: __root },
-		),
+		new CleanWebpackPlugin(),
 		new CopyWebpackPlugin([
 			{
-				from: path.resolve(__root, 'static'),
+				from: path.resolve(__root, 'static')
 			}
 		]),
 		new HtmlWebpackPlugin({
-			template: './src/index.html',
+			template: './src/index.html'
 		}),
 		new webpack.ProvidePlugin({
 			'THREE': 'three'

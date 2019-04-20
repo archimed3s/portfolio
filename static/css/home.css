@@ -1,0 +1,156 @@
+.container {
+	margin-left: 20%;
+}
+
+.home {
+	position: absolute;
+	top: 50%;
+	left: 210px;
+	transform: translateY(-50%);
+}
+
+.home__title {
+	opacity: 0;
+	font-size: 26px;
+	font-weight: 300;
+	color: #7a7a7a;
+}
+
+.home__description {
+	margin: 10px 0 115px;
+	opacity: 0;
+	font-size: 36px;
+	font-weight: 300;
+	color: #fff;
+}
+
+.home__btn {
+	opacity: 0;
+	font-size: 26px;
+	font-weight: 300;
+	color: #ff0072;
+}
+
+.home__btn:hover {
+	color: rgba(255, 0, 114, .8);
+}
+
+.home__title.active,
+.home__description.active,
+.home__btn.active {
+	opacity: 1;
+}
+
+.word {
+	display: inline-block;
+	margin: 0 2px;
+}
+
+.letter {
+	animation-name: fadeIn;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	opacity: 0;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.projects__wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #222222;
+	opacity: 0;
+	display: none;
+}
+
+.projects__wrapper.active {
+	display: block;
+	animation: showProjects 1s both ease;
+}
+
+@keyframes showProjects {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.projects {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 280px;
+	height: 100vw;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transform: rotate(-90deg) translate(50%, -280px);;
+	transform-origin: right top;
+}
+
+.project {
+	width: 280px;
+	height: 280px;
+	margin: 10px;
+}
+
+.project img {
+	transition: all .3s ease;
+}
+
+.project img:hover {
+	box-shadow: 0 3px 30px rgba(0, 0, 0, 0.8);
+}
+
+.projects > .project {
+	transform: rotate(90deg);
+}
+
+.templates__wrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 80%;
+	height: 100%;
+	transform: translateX(-50%);
+	background-color: rgba(0, 0, 0, 0.71);
+	opacity: 0;
+}
+
+.templates__wrapper.active {
+	display: block;
+	animation: showProjects 1s both ease;
+}
+
+.templates__close {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	font-size: 26px;
+	color: white;
+}
+
+.template {
+	display: none;
+	margin: 50px;
+	color: white;
+	opacity: 0;
+}
+
+.template.active {
+	display: block;
+	animation: showProjects 1s both ease;
+}

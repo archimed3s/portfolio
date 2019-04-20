@@ -5,7 +5,7 @@ import Particles from './particles/Particles';
 export default class WebGLView {
 
 	constructor() {
-		this.samples = 'images/sample-latest.png';
+		this.samples = 'static/images/sample-latest.png';
 		this.initThree();
 		this.initParticles();
 		this.initControls();
@@ -46,10 +46,10 @@ export default class WebGLView {
 			return;
 		}
 
-		this.camera.aspect = document.querySelector('.container').offsetWidth / window.innerHeight;
+		this.camera.aspect = document.querySelector('#container').offsetWidth / window.innerHeight;
 		this.camera.updateProjectionMatrix();
 		this.fovHeight = 2 * Math.tan((this.camera.fov * Math.PI) / 180 / 2) * this.camera.position.z;
-		this.renderer.setSize(document.querySelector('.container').offsetWidth, window.innerHeight);
+		this.renderer.setSize(document.querySelector('#container').offsetWidth, window.innerHeight);
 
 		if (this.interactive) {
 			this.interactive.resize();

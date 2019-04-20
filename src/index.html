@@ -1,30 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Interactive Particles | Codrops</title>
-		<meta name="description" content="Demo of a tutorial on how to draw a large number of particles with Three.js and make them interactive." />
-		<meta name="keywords" content="three.js, tutorial, particles, interactive, javascript, webgl" />
-		<meta name="author" content="Bruno Imbrizi for Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-	</head>
-	<body class="demo-1">
-		<main>
-			<div class="frame">
-				<div class="frame__title-wrap">
-					<h1 class="frame__title">Interactive Particles</h1>
-				</div>
-				<a class="frame__github" href="https://github.com/brunoimbrizi/interactive-particles">GitHub</a>
-				<div class="frame__links">
-					<a href="https://tympanus.net/Development/AnimatedMeshLines/">Previous Demo</a>
-					<a href="https://tympanus.net/codrops/?p=37503">Article</a>
-				</div>
-			</div>
-		</main>
-		<div class="container" style="width: 50vw"></div>
-	</body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Taras Mykhalevych</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<div class="container" id="container"></div>
+<section class="home">
+	<h1 class="home__title js-title"><span>Hi, my name Taras Mykhalevych.</span></h1>
+	<p class="home__description js-description"><span>I create design, that are ahead of time</span></p>
+	<button class="home__btn js-btn js-viewPortfolio"><span>view portfolio</span></button>
+</section>
+<section class="projects__wrapper js-projectsContainer">
+	<div class="projects js-projectsEvents">
+		<button class="project" data-project="0">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project" data-project="1">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+		<button class="project">
+			<img src="https://picsum.photos/280/160/?random" alt="Image" class="project__image">
+		</button>
+	</div>
+</section>
+<section class="templates__wrapper">
+	<button class="templates__close js-closePopup">close</button>
+	<div class="templates">
+		<div class="template">Clicked on first element</div>
+		<div class="template">Clicked on second element</div>
+	</div>
+</section>
+</body>
 </html>
